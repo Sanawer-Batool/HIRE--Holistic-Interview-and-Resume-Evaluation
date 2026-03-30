@@ -1,0 +1,511 @@
+[
+  {
+    "id": 1,
+    "name": "Arjun Mehta",
+    "email": "arjun.mehta.dev@email.com",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Deep Learning",
+      "LLMs"
+    ],
+    "resume_text": "Distinguished AI Researcher and Engineer. Former Director of AI at Tesla and Research Scientist at OpenAI. Expert in building large-scale neural networks from scratch (nanoGPT) and optimizing computer vision systems for autonomous driving. Passionate about technical education and simplifying complex AI concepts for the developer community.",
+    "github_url": "https://github.com/karpathy",
+    "portfolio_url": "https://karpathy.ai",
+    "availability": "freelance",
+    "years_experience": 15,
+    "location": "remote"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Jenkins",
+    "email": "s.jenkins.code@email.com",
+    "skills": [
+      "React",
+      "JavaScript",
+      "UI Architecture",
+      "Open Source"
+    ],
+    "resume_text": "Software Engineer at Meta and the creator of Redux and Create React App. Currently focused on improving developer experience through tools like Tailwind CSS and React Server Components. Author of 'Overreacted' blog, specializing in deep-dives into React internals and functional programming patterns.",
+    "github_url": "https://github.com/gaearon",
+    "portfolio_url": "https://overreacted.io",
+    "availability": "full-time",
+    "years_experience": 12,
+    "location": "hybrid"
+  },
+  {
+    "id": 3,
+    "name": "Leo Varghese",
+    "email": "leo.v@apluto.io",
+    "skills": [
+      "Go",
+      "Containers",
+      "Linux Kernel",
+      "Security"
+    ],
+    "resume_text": "Systems Engineer and open-source maintainer known for pioneering work in containerization. Contributor to Docker and Runc. Expert in Linux sandboxing, seccomp, and hardware-level security. Built various specialized tools for infrastructure automation and hardened OS environments.",
+    "github_url": "https://github.com/jessfraz",
+    "portfolio_url": "https://blog.jessfraz.com",
+    "availability": "project-based",
+    "years_experience": 10,
+    "location": "on-site"
+  },
+  {
+    "id": 4,
+    "name": "Elena Rodriguez",
+    "email": "elena.rod@creative.net",
+    "skills": [
+      "Vue.js",
+      "SVG Animation",
+      "DX",
+      "Node.js"
+    ],
+    "resume_text": "Staff Engineer and Vue.js Core Team member. Founder of Netlify's DX team. Expert in creative coding, SVG animations, and building highly accessible web interfaces. Frequent keynote speaker and author of 'SVG Animations' (O'Reilly). Specialized in bridging high-end design with performant frontend architecture.",
+    "github_url": "https://github.com/sdras",
+    "portfolio_url": "https://sarahdransner.com",
+    "availability": "full-time",
+    "years_experience": 13,
+    "location": "remote"
+  },
+  {
+    "id": 5,
+    "name": "David Chen",
+    "email": "d.chen.data@email.com",
+    "skills": [
+      "Python",
+      "C++",
+      "SQL",
+      "Data Engineering"
+    ],
+    "resume_text": "Creator of the 'pandas' library and 'Apache Arrow'. Distinguished Software Engineer with a focus on high-performance data analysis tools and cross-language interoperability. Expert in memory-efficient data structures and bridging the gap between Python and low-level systems for big data processing.",
+    "github_url": "https://github.com/wesm",
+    "portfolio_url": "https://wesmckinney.com",
+    "availability": "freelance",
+    "years_experience": 18,
+    "location": "hybrid"
+  },
+  {
+    "id": 6,
+    "name": "Amina Khan",
+    "email": "amina.k.dev@email.com",
+    "skills": [
+      "Java",
+      "Spring Framework",
+      "Cloud Native",
+      "Kotlin"
+    ],
+    "resume_text": "Spring Developer Advocate at VMware. Recognized Java Champion and host of 'A Bootiful Podcast'. Expert in microservices architecture, reactive programming (Project Reactor), and building resilient cloud-native systems. Prolific open-source contributor and educator in the JVM ecosystem.",
+    "github_url": "https://github.com/joshlong",
+    "portfolio_url": "https://starbuxman.com",
+    "availability": "project-based",
+    "years_experience": 20,
+    "location": "on-site"
+  },
+  {
+    "id": 7,
+    "name": "Marcus Thorne",
+    "email": "m.thorne@cyber.io",
+    "skills": [
+      "Rust",
+      "Regex",
+      "CLI Tools",
+      "Performance Tuning"
+    ],
+    "resume_text": "Principal Software Engineer and creator of 'ripgrep'. Expert in the Rust programming language, focusing on performance, correctness, and low-level optimizations. Deep expertise in finite automata, regular expression engines, and building extremely fast command-line utilities for text processing.",
+    "github_url": "https://github.com/burntsushi",
+    "portfolio_url": "https://blog.burntsushi.net",
+    "availability": "freelance",
+    "years_experience": 11,
+    "location": "remote"
+  },
+  {
+    "id": 8,
+    "name": "Sofia Rossi",
+    "email": "s.rossi.ai@email.com",
+    "skills": [
+      "Python",
+      "OpenCV",
+      "Face Recognition",
+      "Deep Learning"
+    ],
+    "resume_text": "Machine Learning Engineer and author of the world's most popular facial recognition library. Expert in computer vision applications and making AI accessible to software engineers. Specialized in real-time object detection, image processing pipelines, and teaching ML through practical, hands-on tutorials.",
+    "github_url": "https://github.com/ageitgey",
+    "portfolio_url": "https://medium.com/@ageitgey",
+    "availability": "Internship",
+    "years_experience": 9,
+    "location": "hybrid"
+  },
+  {
+    "id": 9,
+    "name": "James Wilson",
+    "email": "j.wilson.web@email.com",
+    "skills": [
+      "Svelte",
+      "SvelteKit",
+      "JavaScript",
+      "Graphics"
+    ],
+    "resume_text": "Graphics editor at the New York Times and the creator of Svelte and Rollup. Expert in compiler-driven UI frameworks and interactive data journalism. Specialized in building extremely lightweight web applications and pushing the boundaries of what is possible in the browser without high runtime overhead.",
+    "github_url": "https://github.com/rich-harris",
+    "portfolio_url": "https://twitter.com/rich_harris",
+    "availability": "full-time",
+    "years_experience": 14,
+    "location": "remote"
+  },
+  {
+    "id": 10,
+    "name": "Priya Sharma",
+    "email": "p.sharma.cloud@email.com",
+    "skills": [
+      "C#",
+      ".NET Core",
+      "Azure",
+      "Web Performance"
+    ],
+    "resume_text": "Partner Program Manager at Microsoft. Prolific tech educator, podcaster (Hanselminutes), and blogger. Expert in the .NET ecosystem, web standards, and internationalization. Specialized in optimizing developer productivity and building inclusive, high-performance web applications.",
+    "github_url": "https://github.com/shanselman",
+    "portfolio_url": "https://www.hanselman.com",
+    "availability": "project-based",
+    "years_experience": 25,
+    "location": "on-site"
+  },
+  {
+    "id": 11,
+    "name": "Lucas Meyer",
+    "email": "l.meyer@oss.org",
+    "skills": [
+      "D3.js",
+      "Data Visualization",
+      "SVG",
+      "JavaScript"
+    ],
+    "resume_text": "The creator of D3.js and founder of Observable. Former graphics editor for The New York Times. World-renowned expert in data visualization, mathematical modeling for graphics, and interactive storytelling. Specialized in creating bespoke, complex visual representations of massive datasets.",
+    "github_url": "https://github.com/mbostock",
+    "portfolio_url": "https://bost.ocks.org/mike",
+    "availability": "freelance",
+    "years_experience": 20,
+    "location": "hybrid"
+  },
+  {
+    "id": 12,
+    "name": "Isabella Grant",
+    "email": "i.grant.dev@email.com",
+    "skills": [
+      "Swift",
+      "SwiftUI",
+      "iOS Architecture",
+      "Tech Education"
+    ],
+    "resume_text": "Founder of 'Hacking with Swift'. Prolific iOS developer and educator. Expert in the Swift programming language and Apple's UI frameworks. Has authored over 30 books on mobile development, specializing in rapid app prototyping, clean architecture, and keeping up with the annual evolution of the iOS SDK.",
+    "github_url": "https://github.com/twostraws",
+    "portfolio_url": "https://www.hackingwithswift.com",
+    "availability": "full-time",
+    "years_experience": 15,
+    "location": "remote"
+  },
+  {
+    "id": 13,
+    "name": "Omar Farooq",
+    "email": "omar.f@tech.co",
+    "skills": [
+      "Ruby on Rails",
+      "Product Strategy",
+      "Remote Work"
+    ],
+    "resume_text": "Creator of Ruby on Rails and Co-founder/CTO of 37signals (Basecamp & HEY). Pioneer of the 'No VC' startup philosophy and advocate for remote work. Expert in opinionated software design, building lean web applications, and maintaining massive open-source frameworks for nearly two decades.",
+    "github_url": "https://github.com/dhh",
+    "portfolio_url": "https://world.hey.com/dhh",
+    "availability": "Internship",
+    "years_experience": 25,
+    "location": "on-site"
+  },
+  {
+    "id": 14,
+    "name": "Chloe Bennett",
+    "email": "chloe.b@frontend.io",
+    "skills": [
+      "CSS",
+      "React",
+      "Generative Art",
+      "Animation"
+    ],
+    "resume_text": "Senior Frontend Engineer and digital artist. Expert in advanced CSS techniques, React-based animations, and generative art. Known for creating highly interactive and visually stunning web experiences. Active member of the creative coding community with a focus on UI polish and 'delightful' UX.",
+    "github_url": "https://github.com/chry_8",
+    "portfolio_url": "https://codepen.io/chry8",
+    "availability": "project-based",
+    "years_experience": 8,
+    "location": "hybrid"
+  },
+  {
+    "id": 15,
+    "name": "Liam O'Connor",
+    "email": "l.oconnor@linux.com",
+    "skills": [
+      "C",
+      "Git",
+      "Linux Kernel",
+      "Open Source Leadership"
+    ],
+    "resume_text": "The creator of Linux and Git. Principal Fellow at the Linux Foundation. Unmatched expertise in operating system kernels, version control systems, and large-scale collaborative software development. Architect of the modern computing world, focusing on system stability, performance, and hardware compatibility.",
+    "github_url": "https://github.com/torvalds",
+    "portfolio_url": "https://www.linuxfoundation.org",
+    "availability": "full-time",
+    "years_experience": 30,
+    "location": "remote"
+  },
+  {
+    "id": 16,
+    "name": "Yuki Tanaka",
+    "email": "y.tanaka@robotics.jp",
+    "skills": [
+      "Go",
+      "Backend Systems",
+      "Infrastructure",
+      "API Design"
+    ],
+    "resume_text": "Software Engineer at Google and prominent Go community member. Expert in cloud infrastructure, API design, and building scalable backend services. Previously worked on various robotics and systems-level projects, focusing on reliability and clean, maintainable code structures.",
+    "github_url": "https://github.com/ctoyls",
+    "portfolio_url": "https://yuki-tanaka.com",
+    "availability": "Internship",
+    "years_experience": 10,
+    "location": "on-site"
+  },
+  {
+    "id": 17,
+    "name": "Rachel Green",
+    "email": "r.green.ux@email.com",
+    "skills": [
+      "React Native",
+      "Expo",
+      "Mobile Infra",
+      "TypeScript"
+    ],
+    "resume_text": "Software Engineer at Expo. Core contributor to the React Native ecosystem. Expert in building cross-platform mobile infrastructure, optimizing app boot times, and managing complex mobile release cycles. Focused on improving the developer experience for thousands of mobile developers worldwide.",
+    "github_url": "https://github.com/brentvatne",
+    "portfolio_url": "https://expo.dev",
+    "availability": "freelance",
+    "years_experience": 11,
+    "location": "hybrid"
+  },
+  {
+    "id": 18,
+    "name": "Simon Peters",
+    "email": "s.peters.ops@email.com",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "Raspberry Pi",
+      "Serverless"
+    ],
+    "resume_text": "Founder of OpenFaaS and CNCF Ambassador. Expert in cloud-native infrastructure, serverless functions, and edge computing. Specialized in making Kubernetes accessible and building tools for the ARM/Raspberry Pi community. Strong focus on DevOps culture and community-driven open source.",
+    "github_url": "https://github.com/alexellis",
+    "portfolio_url": "https://www.alexellis.io",
+    "availability": "project-based",
+    "years_experience": 14,
+    "location": "remote"
+  },
+  {
+    "id": 19,
+    "name": "Zoe Wright",
+    "email": "z.wright@blockchain.io",
+    "skills": [
+      "Solidity",
+      "Ethereum",
+      "Web3 Education",
+      "React"
+    ],
+    "resume_text": "Lead at Scaffold-ETH and Ethereum educator. Expert in smart contract development, decentralized application (dApp) architecture, and rapid prototyping in the Web3 space. Focused on onboarding thousands of developers to the Ethereum ecosystem through interactive builds and open-source components.",
+    "github_url": "https://github.com/austintgriffith",
+    "portfolio_url": "https://speedrunethereum.com",
+    "availability": "Internship",
+    "years_experience": 7,
+    "location": "hybrid"
+  },
+  {
+    "id": 20,
+    "name": "Kevin Park",
+    "email": "k.park.dev@email.com",
+    "skills": [
+      "Dart",
+      "Flutter",
+      "State Management",
+      "Architecture"
+    ],
+    "resume_text": "Principal Engineer at Very Good Ventures and creator of the 'Bloc' library. Expert in Flutter architecture and scalable state management solutions. Specialized in building mission-critical cross-platform applications with 100% test coverage and robust design patterns.",
+    "github_url": "https://github.com/felangel",
+    "portfolio_url": "https://verygood.ventures",
+    "availability": "full-time",
+    "years_experience": 9,
+    "location": "on-site"
+  },
+  {
+    "id": 21,
+    "name": "Hassan Raza",
+    "email": "hassan.raza.dev@email.com",
+    "skills": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs"
+    ],
+    "resume_text": "Backend Developer specializing in building scalable RESTful APIs using Node.js and Express. Experienced in database design with MongoDB and optimizing server performance. Passionate about clean architecture and microservices.",
+    "github_url": "",
+    "portfolio_url": "https://hassanraza.dev",
+    "availability": "freelance",
+    "years_experience": 6,
+    "location": "remote"
+  },
+  {
+    "id": 22,
+    "name": "Fatima Noor",
+    "email": "fatima.noor.ui@email.com",
+    "skills": [
+      "Figma",
+      "UI/UX Design",
+      "Prototyping",
+      "User Research"
+    ],
+    "resume_text": "Creative UI/UX Designer focused on crafting intuitive user experiences. Skilled in Figma and user research methodologies. Worked on multiple mobile and web applications with a strong focus on usability and accessibility.",
+    "github_url": "",
+    "portfolio_url": "https://fatimanoor.design",
+    "availability": "Internship",
+    "years_experience": 5,
+    "location": "hybrid"
+  },
+  {
+    "id": 23,
+    "name": "Ali Zain",
+    "email": "ali.zain.ml@email.com",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "NLP"
+    ],
+    "resume_text": "Machine Learning Engineer with expertise in NLP and deep learning models. Experienced in building chatbots, recommendation systems, and predictive models using TensorFlow and Scikit-learn.",
+    "github_url": "",
+    "portfolio_url": "https://alizain.ai",
+    "availability": "full-time",
+    "years_experience": 7,
+    "location": "on-site"
+  },
+  {
+    "id": 24,
+    "name": "Usman Tariq",
+    "email": "usman.tariq.dev@email.com",
+    "skills": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Backend Systems"
+    ],
+    "resume_text": "Laravel Developer with strong experience in building secure and scalable backend systems. Skilled in REST API development, database optimization, and integrating third-party services.",
+    "github_url": "",
+    "portfolio_url": "https://usmantariq.dev",
+    "availability": "project-based",
+    "years_experience": 8,
+    "location": "remote"
+  },
+  {
+    "id": 25,
+    "name": "Ayesha Siddiqui",
+    "email": "ayesha.siddiqui@email.com",
+    "skills": [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Frontend Development"
+    ],
+    "resume_text": "Frontend Developer specializing in React and Next.js applications. Focused on building fast, responsive, and SEO-friendly web apps using modern UI frameworks like Tailwind CSS.",
+    "github_url": "",
+    "portfolio_url": "https://ayeshasiddiqui.dev",
+    "availability": "Internship",
+    "years_experience": 4,
+    "location": "hybrid"
+  },
+  {
+    "id": 26,
+    "name": "Bilal Ahmed",
+    "email": "bilal.ahmed.cloud@email.com",
+    "skills": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "DevOps"
+    ],
+    "resume_text": "DevOps Engineer with expertise in cloud infrastructure and containerization. Experienced in deploying scalable applications using AWS, Docker, and Kubernetes with CI/CD pipelines.",
+    "github_url": "",
+    "portfolio_url": "https://bilalahmed.cloud",
+    "availability": "freelance",
+    "years_experience": 9,
+    "location": "on-site"
+  },
+  {
+    "id": 27,
+    "name": "Zara Khan",
+    "email": "zara.khan.mobile@email.com",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "Mobile Development",
+      "Firebase"
+    ],
+    "resume_text": "Mobile App Developer specializing in Flutter. Experienced in building cross-platform apps with Firebase integration, real-time databases, and smooth UI/UX experiences.",
+    "github_url": "",
+    "portfolio_url": "https://zarakhan.app",
+    "availability": "full-time",
+    "years_experience": 5,
+    "location": "remote"
+  },
+  {
+    "id": 28,
+    "name": "Imran Sheikh",
+    "email": "imran.sheikh.data@email.com",
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Data Analysis",
+      "ETL"
+    ],
+    "resume_text": "Data Analyst with strong expertise in SQL and Power BI. Skilled in transforming raw data into actionable insights through dashboards and ETL pipelines.",
+    "github_url": "",
+    "portfolio_url": "https://imransheikh.data",
+    "availability": "project-based",
+    "years_experience": 6,
+    "location": "hybrid"
+  },
+  {
+    "id": 29,
+    "name": "Nadia Farooq",
+    "email": "nadia.farooq.qa@email.com",
+    "skills": [
+      "QA Testing",
+      "Selenium",
+      "Automation",
+      "Manual Testing"
+    ],
+    "resume_text": "QA Engineer with experience in both manual and automated testing. Skilled in Selenium and building automation frameworks to ensure high-quality software delivery.",
+    "github_url": "",
+    "portfolio_url": "https://nadiafarooq.qa",
+    "availability": "freelance",
+    "years_experience": 7,
+    "location": "on-site"
+  },
+  {
+    "id": 30,
+    "name": "Saad Malik",
+    "email": "saad.malik.cyber@email.com",
+    "skills": [
+      "Cybersecurity",
+      "Penetration Testing",
+      "Network Security",
+      "Ethical Hacking"
+    ],
+    "resume_text": "Cybersecurity Specialist with expertise in penetration testing and securing network infrastructures. Experienced in vulnerability assessments and ethical hacking practices.",
+    "github_url": "",
+    "portfolio_url": "https://saadmalik.sec",
+    "availability": "full-time",
+    "years_experience": 8,
+    "location": "remote"
+  }
+]
