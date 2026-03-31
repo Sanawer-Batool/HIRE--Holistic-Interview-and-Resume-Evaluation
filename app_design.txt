@@ -1,0 +1,38 @@
+HIRE-Project/
+│
+├── candidates.db
+├── candidates.json
+├── candidates_db.py
+│
+├── backend/
+│   ├── main.py              # FastAPI app entry point
+│   ├── database.py          # DB connection
+│   ├── models.py            # Pydantic schemas (request/response shapes)
+│   └── routes/
+│       ├── __init__.py
+│       └── candidates.py    # All candidate endpoints
+│
+└── requirements.txt
+|__frontend/
+│
+├── app/
+│   ├── layout.js              # root layout, navbar lives here
+│   ├── page.js                # homepage / dashboard
+│   │
+│   └── candidates/
+│       ├── page.js            # list all candidates
+│       ├── [id]/
+│       │   └── page.js        # single candidate profile
+│       └── new/
+│           └── page.js        # add new candidate form
+│
+├── components/
+│   ├── Navbar.js              # top navigation
+│   ├── CandidateCard.js       # card shown in the list
+│   ├── SearchBar.js           # skill search input
+│   └── CandidateForm.js       # add/edit form
+│
+├── lib/
+│   └── api.js                 # all fetch calls to your FastAPI backend
+│
+└── public/
