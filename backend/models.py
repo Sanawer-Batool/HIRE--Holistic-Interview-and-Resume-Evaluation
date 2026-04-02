@@ -25,3 +25,22 @@ class CandidateUpdate(BaseModel):
     availability: Optional[str] = None
     location: Optional[str] = None
     years_experience: Optional[int] = None
+
+# Request body for the match endpoint
+class MatchRequest(BaseModel):
+    job_description: str
+    availability: Optional[str] = None   # if None, don't filter
+    location: Optional[str] = None       # if None, don't filter
+    top_n: Optional[int] = 5             # how many results to return
+
+# What each result looks like in the response
+class MatchResult(BaseModel):
+    id: int
+    name: str
+    email: str
+    skills: str
+    resume_text: str
+    availability: str
+    location: str
+    years_experience: int
+    match_score: float

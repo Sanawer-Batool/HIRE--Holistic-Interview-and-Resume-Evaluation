@@ -6,9 +6,12 @@ export default function Navbar() {
             <Link href="/" className="text-xl font-bold text-blue-600">
                 HIRE
             </Link>
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center">
                 <Link href="/candidates" className="text-gray-600 hover:text-blue-600">
                     Candidates
+                </Link>
+                <Link href="/search" className="text-gray-600 hover:text-blue-600">
+                    Find Candidates
                 </Link>
                 <Link href="/candidates/new" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
                     + Add Candidate
@@ -17,3 +20,4 @@ export default function Navbar() {
         </nav>
     )
 }
+

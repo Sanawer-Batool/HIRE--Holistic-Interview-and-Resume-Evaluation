@@ -8,6 +8,9 @@ HIRE-Project/
 │   ├── main.py              # FastAPI app entry point
 │   ├── database.py          # DB connection
 │   ├── models.py            # Pydantic schemas (request/response shapes)
+│   ├──services/
+│   ├── __init__.py         
+│   └── matching_service.py # sentence transformer
 │   └── routes/
 │       ├── __init__.py
 │       └── candidates.py    # All candidate endpoints
@@ -17,7 +20,9 @@ HIRE-Project/
 │
 ├── app/
 │   ├── layout.js              # root layout, navbar lives here
-│   ├── page.js                # homepage / dashboard
+│   ├── page.js
+│   └── search/
+│   │   └── page.js                # homepage / dashboard
 │   │
 │   └── candidates/
 │       ├── page.js            # list all candidates

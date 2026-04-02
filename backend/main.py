@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.routes.candidates import router as candidates_router
+from backend.routes.matching import router as matching_router 
 
 app = FastAPI(title="HIRE API")
 
@@ -14,6 +15,7 @@ app.add_middleware(
 )
 
 app.include_router(candidates_router, prefix="/api")
+app.include_router(matching_router, prefix="/api")
 
 @app.get("/")
 def root():
