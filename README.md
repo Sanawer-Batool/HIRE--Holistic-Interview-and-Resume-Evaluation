@@ -4,6 +4,8 @@ HIRE is a full-stack recruitment platform that combines semantic candidate match
 
 Instead of keyword-based resume filtering, HIRE uses Sentence Transformers to semantically rank candidates against a job description, then deploys three CrewAI agents to independently verify technical claims via GitHub, send personalized screening emails, and generate a final, explainable hiring scorecard.
 
+<img width="866" height="485" alt="image" src="https://github.com/user-attachments/assets/8951c737-9dcc-4419-a448-aab941e48e77" />
+
 ---
 
 ## Features
@@ -201,16 +203,6 @@ Agents run sequentially using CrewAI, with each agent's output feeding into the 
 - Missing GitHub activity is explicitly treated as "unverifiable," not as a negative signal
 - All AI-generated verdicts are recommendations — the recruiter makes the final hiring decision
 - Hired candidates are soft-excluded (not deleted) and can be reactivated if needed
-
----
-
-## Future Work
-
-- Migrate from SQLite to PostgreSQL with `pgvector` for production-scale vector search
-- Add job-specific posting and application flows alongside the talent pool model
-- Introduce asynchronous task queuing (e.g. Celery) for parallel agent execution
-- Apply cross-encoder re-ranking on the top shortlist for additional precision
-- Build a recruiter-facing analytics dashboard
 
 ---
 
