@@ -13,3 +13,4 @@
 | portfolio_url | TEXT | Personal site or Behance etc. |
 | availability | TEXT | One of: "full-time", "part-time", "remote", "freelance", "contract" |
 | years_experience | INTEGER | Number like 2, 5, 8 |
+| match_score | REAL | Persisted match score used by the scorecard agent |

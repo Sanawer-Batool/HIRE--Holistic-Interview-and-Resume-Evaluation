@@ -1,0 +1,2 @@
+In app/search/page.js, find this line:
+            const data = await matchCandidates(jobDescription, availability, location, 3, experience)

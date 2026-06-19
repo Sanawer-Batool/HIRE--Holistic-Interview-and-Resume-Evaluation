@@ -1,0 +1,56 @@
+generate_hiring_report_task:
+  description: >
+    You have received the following signals for a candidate who applied for 
+    the role below. Synthesize everything into a structured hiring evaluation.
+
+    ── ROLE INFO ────────────────────────────────────────────────
+    Role Applied      : {role_applied}
+    Job Description   : {job_description}
+
+    ── CANDIDATE INFO ───────────────────────────────────────────
+    Candidate Name    : {candidate_name}
+    Candidate Email   : {candidate_email}
+
+    ── SIGNAL 1: ML MATCH SCORE ─────────────────────────────────
+    ML Match Score    : {ml_match_score}%
+    (Semantic similarity between candidate profile and job description)
+
+    ── SIGNAL 2: GITHUB PROFILE ANALYSIS ────────────────────────
+    {github_summary}
+    ─────────────────────────────────────────────────────────────
+
+    Important guidelines:
+    - Be objective and evidence-based
+    - Do NOT penalize for missing GitHub if role doesn't require it
+    - If no GitHub repos match the role, note it as unverifiable — not negative
+    - Weight signals sensibly: ML score = profile fit, GitHub = technical depth
+    - verdict must be exactly one of: STRONG HIRE, HIRE, HOLD, REJECT
+
+  expected_output: >
+    Return ONLY a valid JSON object — no explanation, no markdown, no code fences.
+
+    {
+      "candidate_name": "<name>",
+      "role_applied": "<role>",
+      "ml_score": <integer 0-100>,
+      "github_score": <integer 0-100>,
+      "final_score": <integer 0-100>,
+      "verdict": "<STRONG HIRE | HIRE | HOLD | REJECT>",
+      "strengths": [
+        "<strength 1>",
+        "<strength 2>",
+        "<strength 3>"
+      ],
+      "concerns": [
+        "<concern 1>",
+        "<concern 2>"
+      ],
+      "summary": "<2-3 sentence reasoning grounded in the signals>",
+      "next_step": "<one concrete recommended action>"
+    }
+
+    Rules:
+    - final_score = (ml_score * 0.45) + (github_score * 0.55)
+    - All score fields must be integers
+    - strengths and concerns must each be a list of strings
+    - Return ONLY the JSON object, nothing else

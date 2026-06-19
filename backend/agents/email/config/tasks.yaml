@@ -1,0 +1,31 @@
+compose_and_send_task:
+  description: >
+    Compose 4-5 concise HR screening questions for the candidate below 
+    and send them via email using the send_hr_email tool.
+
+    Candidate Name : {candidate_name}
+    Candidate ID   : {candidate_id}
+    Role Applied   : {role_applied}
+    Job Description: {job_description}
+    Candidate Email: {candidate_email}
+
+    Questions must cover:
+    - Brief self-introduction
+    - Why they are interested in this role
+    - Relevant experience or projects
+    - Salary expectation
+    - Availability (start date / hours per week)
+
+    Important formatting rule:
+    - Return only the numbered list of questions (no greeting, no intro paragraph,
+      no sign-off, no signature placeholders).
+    - Do not mention a specific job title unless Role Applied is explicitly provided
+      and non-empty; otherwise refer to it as "this role".
+
+    After composing the questions, you MUST call the send_hr_email tool
+    with candidate_name, candidate_email, the composed questions,
+    and subject_ref = Ref#{candidate_id}.
+  expected_output: >
+    A confirmation that the email was sent successfully, along with 
+    the exact questions that were sent to the candidate.
+  agent: question_composer_agent

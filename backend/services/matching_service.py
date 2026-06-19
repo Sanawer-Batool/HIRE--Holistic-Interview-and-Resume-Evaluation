@@ -19,7 +19,16 @@ def match_candidates(job_description: str, candidates: list, top_n: int = 5):
     jd_vector = model.encode([job_description])
 
     # Step 2 — encode every candidate's resume_text into vectors
-    resumes = [c["resume_text"] for c in candidates]
+    resumes = []
+    for candidate in candidates:
+        resume_text = candidate.get("resume_text", "")
+        applying_for = candidate.get("applying_for", "")
+
+        if applying_for and applying_for.strip():
+            resumes.append(f"{resume_text} Interested in: {applying_for}")
+        else:
+            resumes.append(resume_text)
+
     resume_vectors = model.encode(resumes)
 
     # Step 3 — calculate similarity score between JD and each resume

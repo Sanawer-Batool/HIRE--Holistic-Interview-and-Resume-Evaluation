@@ -1,0 +1,64 @@
+scrape_github_task:
+  description: >
+    Crawl and analyze GitHub data for candidate @{github_username}.
+
+    You must use the available tools to gather profile + repository evidence:
+    - get_candidate_github_report(username)
+    - get_github_profile(username)
+    - get_github_repos(username)
+
+    Role Applied    : {role_applied}
+    Job Description : {job_description}
+
+    Instructions:
+    - Ground every observation in fetched GitHub data only.
+    - Prefer concrete repository examples over generic statements.
+    - If public data is limited, state that explicitly instead of guessing.
+
+  expected_output: >
+    Return a structured analysis (plain text) containing:
+    - Candidate GitHub snapshot
+    - Technical stack signals
+    - 3-5 notable recent repositories with relevance notes
+    - Activity/consistency observations
+    - Strengths and gaps inferred from evidence
+
+compile_github_report_task:
+  description: >
+    Using the GitHub analysis from the previous task, compile a clean,
+    structured technical summary of the candidate.
+
+    Role Applied    : {role_applied}
+    Job Description : {job_description}
+
+    Organize the observations into a concise and readable report.
+    Do NOT assign scores or hiring verdicts.
+    Focus on summarizing technical stack, project relevance, activity, and gaps.
+
+  expected_output: >
+    Return ONLY a valid JSON object — no explanation, no markdown, no code fences.
+
+    {
+      "github_username": "<username>",
+      "role_applied": "<role>",
+      "technical_stack": ["Python", "FastAPI", "PostgreSQL"],
+      "recent_repos": [
+        {
+          "name": "<repo name>",
+          "relevance": "HIGH",
+          "notes": "<brief reasoning>",
+          "readme_quality": "Good — clear setup instructions"
+        }
+      ],
+      "code_activity": "<2 sentence summary of consistency and recency>",
+      "readme_quality_overall": "<one sentence>",
+      "strengths": ["<strength 1>", "<strength 2>"],
+      "gaps": ["<gap 1>", "<gap 2>"],
+      "overall_observation": "<2-3 sentence factual summary>"
+    }
+
+    Rules:
+    - relevance must be exactly HIGH, MEDIUM, or LOW
+    - technical_stack is a flat list of strings
+    - strengths and gaps are flat lists of strings
+    - Return ONLY the JSON object, nothing else

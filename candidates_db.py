@@ -7,12 +7,20 @@ def connect_db():
     return sqlite3.connect("candidates.db")
 
 
+def ensure_column(cursor, table_name, column_name, column_definition):
+    existing_columns = {
+        row[1] for row in cursor.execute(f"PRAGMA table_info({table_name})")
+    }
+
+    if column_name not in existing_columns:
+        cursor.execute(f"ALTER TABLE {table_name} ADD COLUMN {column_definition}")
+
+
 def create_table():
     conn = connect_db()
     cursor = conn.cursor()
-    cursor.execute("DROP TABLE IF EXISTS candidates")
     cursor.execute("""
-    CREATE TABLE candidates (
+    CREATE TABLE IF NOT EXISTS candidates (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
         email TEXT,
@@ -22,12 +30,54 @@ def create_table():
         portfolio_url TEXT,
         availability TEXT,
         years_experience INTEGER,
-        location TEXT
+        location TEXT,
+        applying_for TEXT DEFAULT NULL,
+        match_score REAL DEFAULT NULL,
+        github_report TEXT DEFAULT NULL,
+        email_sent INTEGER DEFAULT 0,
+        email_response TEXT DEFAULT NULL,
+        responded_at TEXT DEFAULT NULL,
+        status TEXT DEFAULT 'active'
     )
     """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS job_runs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        job_title TEXT,
+        job_description TEXT,
+        role_applied TEXT,
+        availability TEXT,
+        location TEXT,
+        created_at TEXT DEFAULT (datetime('now')),
+        status TEXT DEFAULT 'in_progress'
+    )
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS job_run_candidates (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        job_run_id INTEGER,
+        candidate_id INTEGER,
+        candidate_name TEXT,
+        candidate_email TEXT,
+        ml_score REAL,
+        github_report TEXT,
+        email_sent INTEGER DEFAULT 0,
+        email_response TEXT,
+        responded_at TEXT,
+        hiring_report TEXT,
+        disposition TEXT DEFAULT NULL,
+        FOREIGN KEY (job_run_id) REFERENCES job_runs(id)
+    )
+    """)
+
+    ensure_column(cursor, "candidates", "status", "status TEXT DEFAULT 'active'")
+    ensure_column(cursor, "job_run_candidates", "disposition", "disposition TEXT DEFAULT NULL")
+
     conn.commit()
     conn.close()
-    print("Table is ready!")
+    print("Tables ready!")
 
 
 def auto_insert_json():
@@ -46,12 +96,12 @@ def auto_insert_json():
                 skills_str = ', '.join(c["skills"]) if isinstance(c["skills"], list) else c["skills"]
                 cursor.execute("""
                 INSERT INTO candidates
-                (name, email, skills, resume_text, github_url, portfolio_url, availability, years_experience, location)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                (name, email, skills, resume_text, github_url, portfolio_url, availability, years_experience, location, applying_for)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """, (
                     c["name"], c["email"], skills_str, c["resume_text"],
                     c["github_url"], c["portfolio_url"],
-                    c["availability"], c["years_experience"], c["location"]
+                    c["availability"], c["years_experience"], c["location"], c.get("applying_for")
                 ))
 
             conn.commit()
